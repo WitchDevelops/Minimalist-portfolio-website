@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins&display=swap");
 @import url(./utilities/reset.css);
-$color--main: #33323d;
-$color--main-lighter: #203a4c;
+$color--dark: 	hsl(245, 10%, 22%);
+$color--main: hsl(205, 41%, 21%);
+$color--main--darker: hsl(205, 41%, 25%);
 $color--hover: #94a8a4;
+$color--accent: #5FB4A2;
 $color--white: #fff;
+
+::-moz-selection {
+  background: $color--accent;
+  color: $color--white;
+}
+::selection {
+  background: $color--accent;
+  color: $color--white;
+}
 .navbar {
   padding-block: 2rem;
 }
@@ -28,7 +39,7 @@ $color--white: #fff;
     gap: 24px;
 }
 .nav-item {
-    color: #33323D;
+    color: $color--dark;
 font-family: Public Sans;
 font-size: 12px;
 font-style: normal;
@@ -47,6 +58,7 @@ text-transform: uppercase;
   width: 200px;
   height: 48px;
   text-align: center;
+  
   &__text {
     font-family: "Public Sans";
     font-size: 12px;
@@ -58,16 +70,21 @@ text-transform: uppercase;
     margin: auto;
   }
   &--primary {
-    background: $color--main-lighter;
+    background-color: $color--main;
     display: flex;
     flex-direction: row;
     align-items: center;
     color: $color--white;
+    position: relative;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      background-color: $color--main--darker;
+    }
   }
   &--secondary {
-    outline: 1px solid $color--main;
+    outline: 1px solid $color--dark;
     padding: 1rem;
-    color: $color--main;
+    color: $color--dark;
     font-family: "Public Sans";
     font-size: 12px;
     font-style: normal;
@@ -77,11 +94,12 @@ text-transform: uppercase;
     text-transform: uppercase;
     transition: all 200ms ease-in-out;
     &:hover {
-        background-color: $color--main;
+        background-color: $color--accent;
+        outline: 1px solid $color--white;
         color: $color--white;
     }
     &:active {
-        background-color: $color--hover;
+        background-color: $color--dark;
         outline: 1px solid $color--white;
         color: $color--white;
     }
@@ -89,7 +107,7 @@ text-transform: uppercase;
 }
 
 .section__break {
-  color: $color--main;
+  color: $color--dark;
   height: 1px;
   opacity: 0.15;
   &--1 {
@@ -102,7 +120,7 @@ text-transform: uppercase;
 }
 
 .section__header {
-  color: #33323d;
+  color: $color--dark;
   font-family: "Ibarra Real Nova", serif;
   font-size: 40px;
   font-style: normal;
@@ -120,11 +138,12 @@ text-transform: uppercase;
 }
 
 .home__about-me {
-  margin-top: 6rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
 }
 
 .about-me__text {
-  color: #33323d;
+  color: $color--dark;
   font-family: Public Sans;
   font-size: 16px;
   font-style: normal;
@@ -151,14 +170,16 @@ text-transform: uppercase;
 }
 
 .footer {
-  background-color: $color--main;
+  background-color: $color--dark;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   align-items: center;
   padding-block: 3.5rem;
-  
+  & > .section__header {
+    text-wrap: balance;
+  }
   &__text {
     text-align: center;
     font-family: Public Sans;
@@ -174,12 +195,19 @@ text-transform: uppercase;
     color: $color--white;
     padding: 1rem;
     &:hover {
-        background-color: $color--hover;
+        background-color: $color--accent;
     }
     &:active {
         background-color: $color--white;
-        color: $color--main;
+        color: $color--accent;
     }
     }
+  }
+  &__icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   }
 }
