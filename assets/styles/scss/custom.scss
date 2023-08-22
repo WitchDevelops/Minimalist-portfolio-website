@@ -156,7 +156,8 @@ $color--white: #fff;
     }
   }
   &--3 {
-    width: 113px;
+    min-width: 113px;
+    max-width: 530px;
   }
 }
 
@@ -171,6 +172,10 @@ $color--white: #fff;
 }
 
 /* main styles */
+.body__wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
 
 .home__intro {
   margin-top: 0.5rem;
@@ -213,10 +218,11 @@ $color--white: #fff;
       margin-top: 51px;
     }
     &__rightCtn {
-      padding-left: 8.2%;
+       margin-left: 8.2%;
       display: flex;
       flex-direction: column;
       align-content: stretch;
+      border-block: 1px solid hsla(205, 41%, 21%, 0.15);
     }
   }
 }
@@ -231,13 +237,19 @@ $color--white: #fff;
   opacity: 0.8;
   margin-top: 28px;
   margin-bottom: 24px;
+  @media(min-width: 992px) {
+    max-width: 350px;
+  }
 }
 
 .about-me__picture > img {
   width: 100%;
   max-width: 350px;
-  max-height: 600px;
+  //max-height: 600px;
   object-fit: cover;
+  @media (min-width: 768px) {
+    max-width: unset;
+  }
 }
 
 .home__contact {
@@ -274,23 +286,31 @@ $color--white: #fff;
   align-items: center;
   justify-content: center;
   padding-block: 3.5rem;
+  &__wrapper {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    padding-inline: 40px;
+    }
+  }
   &__Ctn {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-  }
-  @media (min-width: 768px) {
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    padding-inline: 40px;
-    &__Ctn {
+    @media (min-width: 768px) {
+    
       flex-direction: row;
       align-items: center;
       gap: 48px;
-    }
+    
   }
+  
+  }
+  
   & > .section__header {
     text-wrap: balance;
   }
