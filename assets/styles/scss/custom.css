@@ -41,8 +41,8 @@
 
 .nav-item {
   color: hsl(245, 10%, 22%);
-  font-family: Public Sans;
-  font-size: 12px;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -77,11 +77,11 @@
 
 /* utility classes */
 .padding-2 {
-  padding-inline: 32px;
+  padding-inline: 2rem;
 }
 @media (min-width: 768px) {
   .padding-2 {
-    padding-inline: 40px;
+    padding-inline: 2.5rem;
   }
 }
 
@@ -93,7 +93,7 @@
 }
 .button__text {
   font-family: "Public Sans";
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -118,7 +118,7 @@
   padding: 1rem;
   color: hsl(245, 10%, 22%);
   font-family: "Public Sans";
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -142,23 +142,6 @@
   height: 1px;
   opacity: 0.15;
 }
-.section__break--1 {
-  margin-block: 32px;
-}
-@media (min-width: 768px) {
-  .section__break--1 {
-    margin-block: 0;
-  }
-}
-.section__break--2 {
-  margin-top: 51px;
-  margin-bottom: 115px;
-}
-@media (min-width: 768px) {
-  .section__break--2 {
-    margin-bottom: 0;
-  }
-}
 .section__break--3 {
   min-width: 113px;
   max-width: 530px;
@@ -167,10 +150,10 @@
 .section__header {
   color: hsl(245, 10%, 22%);
   font-family: "Ibarra Real Nova", serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 42px; /* 105% */
+  line-height: 1.05; /* 105% */
   letter-spacing: -0.357px;
 }
 
@@ -182,6 +165,7 @@
 
 .home__intro {
   margin-top: 0.5rem;
+  margin-bottom: 2.75rem;
 }
 .home__intro .section__header {
   margin-top: 1.5rem;
@@ -197,50 +181,51 @@
     bottom: 0;
     left: 0;
     background-color: #fff;
-    padding-left: 40px;
+    padding-left: 2.5rem;
     max-width: 514px;
   }
   .home__inset .section__header {
-    margin-top: 56px;
-    margin-right: 56px;
-    margin-bottom: 48px;
+    margin-block: 3.5rem;
+    margin-bottom: 3rem;
     max-width: 458px;
     text-wrap: balance;
   }
 }
 .home__about-me {
-  margin-top: 64px;
-  padding-top: 32px;
+  padding-block: 2rem;
 }
 @media (min-width: 768px) {
   .home__about-me {
     padding-top: 0;
-    margin-top: 96px;
+    margin-top: 6rem;
     display: flex;
     flex-direction: row;
   }
-  .home__about-me .section__header {
-    margin-top: 51px;
-  }
+}
+.home__about-me__rightCtn {
+  padding-block: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  border-block: 1px solid hsla(205, 41%, 21%, 0.15);
+}
+@media (min-width: 768px) {
   .home__about-me__rightCtn {
     margin-left: 8.2%;
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
-    border-block: 1px solid hsla(205, 41%, 21%, 0.15);
   }
 }
 
 .about-me__text {
   color: hsl(245, 10%, 22%);
   font-family: Public Sans;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px; /* 187.5% */
+  line-height: 1.87rem; /* 187.5% */
   opacity: 0.8;
-  margin-top: 28px;
-  margin-bottom: 24px;
+  margin-top: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 992px) {
   .about-me__text {
@@ -257,11 +242,16 @@
 @media (min-width: 768px) {
   .about-me__picture > img {
     max-width: unset;
+    height: 100%;
   }
 }
 
+.home__contact {
+  margin-top: 115px;
+}
 .home__contact > .section__header {
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 @media (min-width: 768px) {
   .home__contact > .section__header {
@@ -273,15 +263,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
-    margin-block: 96px;
+    gap: 2rem;
+    margin-block: 6rem;
   }
 }
 
 .CTA {
   margin: auto;
-  margin-top: 40px;
-  margin-bottom: 80px;
+  margin-top: 2.5;
+  margin-bottom: 5rem;
 }
 @media (min-width: 768px) {
   .CTA {
@@ -304,22 +294,24 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
-    padding-inline: 40px;
+    justify-content: center;
   }
 }
 .footer__Ctn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 2.5rem;
 }
 @media (min-width: 768px) {
   .footer__Ctn {
     flex-direction: row;
     align-items: center;
-    gap: 48px;
+    gap: 3rem;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding-inline: 2.5rem;
   }
 }
 .footer > .section__header {
@@ -328,7 +320,7 @@
 .footer__text {
   text-align: center;
   font-family: Public Sans;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -358,5 +350,5 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
 }/*# sourceMappingURL=custom.css.map */
